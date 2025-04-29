@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${rubik.className} antialiased`}>
+      <body className={`${rubik.className} antialiased text-black`}>
         <main>{children}</main>
       </body>
     </html>

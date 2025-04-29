@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 const CreateAccount = () => {
   const [form, setForm] = useState({
@@ -12,13 +13,29 @@ const CreateAccount = () => {
     isAgency: 'no',
   });
 
+  const [error, setError] = useState('');
+  const router = useRouter();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const { name, phone, email, password, isAgency } = form;
+    if (!name || !phone || !email || !password || !isAgency) {
+      setError('Please fill all required fields.');
+      return;
+    }
+
+    localStorage.setItem('userData', JSON.stringify(form));
+    router.push('/account');
+  };
+
   return (
-    <form className="w-full max-w-md space-y-6">
+    <form className="w-full max-w-md space-y-6" onSubmit={handleSubmit}>
       {[
         { label: 'Full Name', name: 'name', type: 'text', required: true },
         { label: 'Phone Number', name: 'phone', type: 'tel', required: true },
@@ -68,6 +85,8 @@ const CreateAccount = () => {
           ))}
         </div>
       </div>
+
+      {error && <p className="text-red-500 text-sm">{error}</p>}
 
       <div>
         <button
