@@ -17,12 +17,12 @@ const SigninForm = () => {
     setForm({ ...form, [name]: value });
   };
 
+  const isFormValid = form.email.trim() !== '' && form.password.trim() !== '';
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const { email, password } = form;
-
-    if (!email || !password) {
+    if (!isFormValid) {
       setError('Please fill in all fields.');
       return;
     }
@@ -33,10 +33,7 @@ const SigninForm = () => {
 
   return (
     <form className="w-full max-w-md space-y-6" onSubmit={handleSubmit}>
-      {[
-        { label: 'Email Address', name: 'email', type: 'email', required: true },
-        { label: 'Password', name: 'password', type: 'password', required: true },
-      ].map((field) => (
+      {[{ label: 'Email Address', name: 'email', type: 'email' }, { label: 'Password', name: 'password', type: 'password' }].map((field) => (
         <div key={field.name} className="relative z-0 w-full group">
           <input
             type={field.type}
@@ -45,7 +42,7 @@ const SigninForm = () => {
             value={form[field.name]}
             onChange={handleChange}
             placeholder=" "
-            required={field.required}
+            required
             className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
           />
           <label
@@ -61,7 +58,10 @@ const SigninForm = () => {
 
       <button
         type="submit"
-        className="bg-[#6C25FF] hover:bg-[#5b1de0] text-white font-medium py-2 px-4 rounded-md w-full"
+        disabled={!isFormValid}
+        className={`font-medium py-2 px-4 rounded-md w-full text-white ${
+          isFormValid ? 'bg-[#6C25FF] hover:bg-[#5b1de0]' : 'bg-[#CBCBCB] cursor-not-allowed'
+        }`}
       >
         Continue
       </button>

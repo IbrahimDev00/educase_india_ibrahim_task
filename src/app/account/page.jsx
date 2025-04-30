@@ -16,12 +16,12 @@ export default function Account() {
 
   return (
     <>
-      <header className="bg-[#FFFFFF] w-full text-[#1D2226] text-[18px] pb-8 pt-4 pl-3">
+      <header className="bg-[#FFFFFF] w-full text-[#1D2226] text-[18px] pb-8 pt-4 pl-3 mt-2">
         Account Settings
       </header>
 
       <main className="bg-[#F7F8F9] w-full p-5 flex flex-col items-center">
-        <div className="flex flex-row items-center p-3 gap-x-4 gap-y-2">
+        <div className="flex flex-row items-center p-2 gap-x-4 gap-y-2">
           <div className="relative w-[76px] h-[76px]">
             <Image
               src="/pf-1.png"
@@ -50,10 +50,9 @@ export default function Account() {
         </div>
 
         <p className="text-[14px] text-[#1D2226] text-left p-3">
-          Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing <br />
-          Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut <br />
-          Labore Et Dolore Magna Aliquyam Erat, Sed Diam
+          Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam
         </p>
+
       </main>
     </>
   );

@@ -56,7 +56,7 @@ const CreateAccount = () => {
           />
           <label
             htmlFor={field.name}
-            className="absolute text-sm text-[#6C25FF] duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-[#ffffff] px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-2"
+            className="absolute text-sm text-[#6C25FF] duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-[#F7F8F9] px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-2"
           >
             {field.label}
             {field.required && <span className="text-red-500 ml-1">*</span>}
@@ -91,7 +91,7 @@ const CreateAccount = () => {
       <div>
         <button
           type="submit"
-          className="bg-[#6C25FF] hover:bg-[#5b1de0] text-white font-medium py-2 px-4 rounded-md w-full"
+          className="bg-[#6C25FF] hover:bg-[#5b1de0] text-white font-medium py-2 px-4 rounded-md w-full mt-15"
         >
           Create Account
         </button>
