@@ -17,4 +17,18 @@
 - Usage of useEffect to mount user data dynamically.
 - Optimizing page load times, by lazy loading images [from Image in Next.JS].
   
-   
+### Images
+- **Home page**
+![image](https://github.com/user-attachments/assets/c0bfeef1-d27c-4d35-ac48-28a087792968)
+
+- **Sigin**
+![image](https://github.com/user-attachments/assets/8f0ce413-a99f-4f14-a327-3b807b662e6a)
+
+- **SignUp**
+![image](https://github.com/user-attachments/assets/f8d955e1-3d9b-4a6a-87bc-a6a08bb20c1e)
+
+- **Account**
+![image](https://github.com/user-attachments/assets/595a8b40-261d-4d59-8db6-0ac9c40f37b0)
+
+
+
